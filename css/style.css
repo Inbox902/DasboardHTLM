@@ -1,20 +1,25 @@
 :root {
     --main-radius: 5px;
     --main-padding: 5px;
+    --main-background: rgba(0, 0, 246, 0.512);
+}
+
+body {
+    background: lighten(#52565e, 35%);
 }
 
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr 2fr 0.1fr;
     grid-template-areas:
         "nav nav nav nav"
-        "sidebar main main main"
         "sidebar content1 content2 content3"
+        "sidebar main main main"
         "sidebar footer footer footer"
     ;
-    grid-gap: 0.2rem;
+    grid-gap: 0.5rem;
     /* pengaturan style container */
     font-family: 'Times New Roman', Times, serif;
     font-weight: 800;
@@ -22,49 +27,129 @@
     font-size: 12px;
     color: black;
     text-align: center;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 nav {
-    background: yellow;
     grid-area: nav;
     border-radius: var(--main-radius);
     border-top: var(--main-padding);
+    background: var(--main-background);
+
 }
 
 main {
-    background: red;
+    background: var(--main-background);
     grid-area: main;
     border-radius: var(--main-radius);
     border-top: var(--main-padding);
 }
 
-#sidebar {
-    background: rgb(255, 23, 132);
-    grid-area: sidebar;
-    border-radius: var(--main-radius);
-    border-top: var(--main-padding);
+table {
+    border-collapse: collapse;
+    background: #ffffff;
+    width: 100%;
+    overflow-x: scroll;
+    /* border: 1px solid red; */
+
 }
 
+caption,
+th,
+td {
+    padding: 0.5rem;
+    border: 1px solid rgb(110, 110, 110);
+}
+
+th {
+    text-align: center;
+}
+
+caption {
+    background: hsl(0 0% 0%);
+    color: #fff;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+th {
+    background: hsl(134 93% 57%);
+}
+
+tr:nth-last-of-type(2n) {
+    background: hsl(0, 0%, 87%);
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: var(--main-background);
+    border-radius: var(--main-radius);
+    border-top: var(--main-padding);
+    transition: all 0.5s ease;
+}
+
+.sidebar .top {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    background-image: linear-gradient(to right, #fec8a7, #b2d2a4);
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(6, 255, 251, 0.1);
+    border-bottom: 1px solid rgba(125, 134, 146, 0.302);
+    transition: all 0.5s ease;
+}
+
+ul li:hover a {
+    padding-left: 14px;
+    background: #efe7bc;
+    color: rgb(0, 0, 0);
+}
+
+.sidebar ul a i {
+    margin-right: 5px;
+}
+
+
 #content1 {
-    background: rgb(11, 245, 148);
     grid-area: content1;
     border-radius: var(--main-radius);
     border-top: var(--main-padding);
+    background: var(--main-background);
 }
 
 #content2 {
-    background: rgb(207, 79, 109);
     grid-area: content2;
     border-radius: var(--main-radius);
     border-top: var(--main-padding);
+    background: var(--main-background);
 }
 
 #content3 {
-    background: rgb(152, 93, 4);
     grid-area: content3;
     border-radius: var(--main-radius);
     border-top: var(--main-padding);
+    background: var(--main-background);
 }
 
 footer {
@@ -72,7 +157,32 @@ footer {
     grid-area: footer;
     border-radius: var(--main-radius);
     border-top: var(--main-padding);
+    background: var(--main-background);
 
+}
+
+.box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+
+.box-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+
+.box-shadow--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+}
+
+.box-shadow--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+}
+
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
 }
 
 /* mobile phone */

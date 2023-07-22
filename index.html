@@ -12,12 +12,58 @@
 <body>
     <div class="container">
         <nav>Navbar</nav>
-        <main>Main</main>
-        <div id="sidebar">Sidebar</div>
-        <div id="content1">content1</div>
-        <div id="content2">Content2</div>
-        <div id="content3">Content3</div>
-        <footer>Footer</footer>
+        <div class="box-shadow--6dp" id="content1">content1</div>
+        <div class="box-shadow--6dp" id="content2">Content2</div>
+        <div class="box-shadow--6dp" id="content3">Content3</div>
+        <div class="sidebar box-shadow--6dp">
+            <div class="top">
+                Sidebar
+            </div>
+            <ul>
+                <li><a class="#" href="#"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a class="#" href="#"><i class="fa fa-shopping-basket"></i> Orders</a></li>
+                <li><a class="#" href="#"><i class="fa fa-shopping-bag"></i> Products</a></li>
+                <li><a class="#" href="#"><i class="fa fa-user-circle"></i> Profile</a></li>
+            </ul>
+        </div>
+        <main class="box-shadow--6dp">
+            <div class="tabel-container">
+                <table class="table-bordered box-shadow--6dp">
+                    <caption>Judul Tabel</caption>
+                    <tr>
+                        <th>No</th>
+                        <th>Tanggal Reg</th>
+                        <th>Nama</th>
+                        <th>Kelamin</th>
+                    </tr>
+                    <tr>
+                        <td id="no">1</td>
+                        <td id="TanggalReg">12/01/2022</td>
+                        <td id="Nama">Anton Hermawan</td>
+                        <td id="Kelamin">Pria</td>
+                    </tr>
+                    <tr>
+                        <td id="no">2</td>
+                        <td id="TanggalReg">12/01/2022</td>
+                        <td id="Nama">Inem kusuma sari</td>
+                        <td id="Kelamin">Wanita</td>
+                    </tr>
+                    <tr>
+                        <td id="no">3</td>
+                        <td id="TanggalReg">12/01/2022</td>
+                        <td id="Nama">David Pramono</td>
+                        <td id="Kelamin">Pria</td>
+                    </tr>
+                    <tr>
+                        <td id="no">4</td>
+                        <td id="TanggalReg">12/01/2022</td>
+                        <td id="Nama">Fujiwati</td>
+                        <td id="Kelamin">Wanita</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer class="box-shadow--6dp">Footer</footer>
     </div>
     <script src="./js/script.js"></script>
 </body>
